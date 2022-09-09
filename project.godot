@@ -1,0 +1,170 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "ResourceFormatLoader",
+"class": "HTerrainDataLoader",
+"language": "GDScript",
+"path": "res://addons/zylann.hterrain/hterrain_resource_loader.gd"
+}, {
+"base": "ResourceFormatSaver",
+"class": "HTerrainDataSaver",
+"language": "GDScript",
+"path": "res://addons/zylann.hterrain/hterrain_resource_saver.gd"
+}, {
+"base": "Reference",
+"class": "TOD_AtmosphereLib",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_atmosphere_lib.gd"
+}, {
+"base": "Spatial",
+"class": "TOD_CloudsBase",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_clouds_base.gd"
+}, {
+"base": "Reference",
+"class": "TOD_Const",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/common/tod_const.gd"
+}, {
+"base": "Reference",
+"class": "TOD_DateTimeUtil",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/time-of-day/tod_date_time_util.gd"
+}, {
+"base": "TOD_CloudsBase",
+"class": "TOD_DynamicClouds",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_dynamic_clouds.gd"
+}, {
+"base": "Reference",
+"class": "TOD_Enums",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/common/tod_enums.gd"
+}, {
+"base": "Node",
+"class": "TOD_Manager",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/time-of-day/tod_manager.gd"
+}, {
+"base": "Reference",
+"class": "TOD_Math",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/common/tod_math.gd"
+}, {
+"base": "Resource",
+"class": "TOD_OrbitalElements",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/time-of-day/tod_orbital_elements.gd"
+}, {
+"base": "TOD_CloudsBase",
+"class": "TOD_Panorama",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_clouds_panorama.gd"
+}, {
+"base": "Reference",
+"class": "TOD_SkyConst",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_sky_const.gd"
+}, {
+"base": "Reference",
+"class": "TOD_SkyDrawer",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_sky_drawer.gd"
+}, {
+"base": "Reference",
+"class": "TOD_SkyEnums",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_sky_enums.gd"
+}, {
+"base": "Spatial",
+"class": "TOD_SkyProbe",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_sky_probe.gd"
+}, {
+"base": "Resource",
+"class": "TOD_SkyResources",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_sky_resources.gd"
+}, {
+"base": "Spatial",
+"class": "TOD_Skydome",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/skydome/tod_skydome.gd"
+}, {
+"base": "ArrayMesh",
+"class": "TOD_Triangle",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/common/tod_triangle.gd"
+}, {
+"base": "Reference",
+"class": "TOD_Util",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/common/tod_util.gd"
+}, {
+"base": "EditorPlugin",
+"class": "TimeOfDayPlugin",
+"language": "GDScript",
+"path": "res://addons/jc.godot3.time-of-day/scr/time_of_day_plugin.gd"
+} ]
+_global_script_class_icons={
+"HTerrainDataLoader": "",
+"HTerrainDataSaver": "",
+"TOD_AtmosphereLib": "",
+"TOD_CloudsBase": "",
+"TOD_Const": "",
+"TOD_DateTimeUtil": "",
+"TOD_DynamicClouds": "",
+"TOD_Enums": "",
+"TOD_Manager": "",
+"TOD_Math": "",
+"TOD_OrbitalElements": "",
+"TOD_Panorama": "",
+"TOD_SkyConst": "",
+"TOD_SkyDrawer": "",
+"TOD_SkyEnums": "",
+"TOD_SkyProbe": "",
+"TOD_SkyResources": "",
+"TOD_Skydome": "",
+"TOD_Triangle": "",
+"TOD_Util": "",
+"TimeOfDayPlugin": ""
+}
+
+[application]
+
+config/name="cat_platformer"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/SIsilicon.vfx.godrays/plugin.cfg", "res://addons/jc.godot3.time-of-day/plugin.cfg", "res://addons/waterways/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg", "res://addons/zylann.scatter/plugin.cfg" )
+
+[global]
+
+quality=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/filters/anisotropic_filter_level=16
+quality/reflections/atlas_size=4096
+quality/reflections/atlas_subdiv=5
+environment/default_environment="res://default_env.tres"
+quality/godrays/sample_number=50
+quality/godrays/use_pcf5=false
+quality/godrays/dither_amount=1.0

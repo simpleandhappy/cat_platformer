@@ -1,0 +1,112 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://addons/jc.godot3.time-of-day/scr/skydome/shaders/cube_to_sp.shader" type="Shader" id=1]
+
+[sub_resource type="Environment" id=3]
+background_mode = 1
+
+[sub_resource type="ViewportTexture" id=4]
+viewport_path = NodePath("Back")
+
+[sub_resource type="ViewportTexture" id=5]
+viewport_path = NodePath("Down")
+
+[sub_resource type="ViewportTexture" id=6]
+viewport_path = NodePath("Front")
+
+[sub_resource type="ViewportTexture" id=7]
+viewport_path = NodePath("Left")
+
+[sub_resource type="ViewportTexture" id=8]
+viewport_path = NodePath("Right")
+
+[sub_resource type="ViewportTexture" id=9]
+viewport_path = NodePath("Up")
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/front = SubResource( 6 )
+shader_param/back = SubResource( 4 )
+shader_param/left = SubResource( 7 )
+shader_param/right = SubResource( 8 )
+shader_param/up = SubResource( 9 )
+shader_param/down = SubResource( 5 )
+
+[node name="SkyProbeRT" type="Spatial"]
+__meta__ = {
+"_editor_description_": "Render Target Cubemap.
+"
+}
+
+[node name="Front" type="Viewport" parent="."]
+size = Vector2( 256, 256 )
+render_target_update_mode = 3
+
+[node name="Camera2" type="Camera" parent="Front"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+environment = SubResource( 3 )
+current = true
+fov = 90.0
+
+[node name="Right" type="Viewport" parent="."]
+size = Vector2( 256, 256 )
+render_target_update_mode = 3
+
+[node name="Camera3" type="Camera" parent="Right"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0 )
+environment = SubResource( 3 )
+current = true
+fov = 90.0
+
+[node name="Left" type="Viewport" parent="."]
+size = Vector2( 256, 256 )
+render_target_update_mode = 3
+
+[node name="Camera4" type="Camera" parent="Left"]
+environment = SubResource( 3 )
+current = true
+fov = 90.0
+
+[node name="Back" type="Viewport" parent="."]
+size = Vector2( 256, 256 )
+render_target_update_mode = 3
+
+[node name="Camera5" type="Camera" parent="Back"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )
+environment = SubResource( 3 )
+current = true
+fov = 90.0
+
+[node name="Up" type="Viewport" parent="."]
+size = Vector2( 256, 256 )
+render_target_update_mode = 3
+
+[node name="Camera6" type="Camera" parent="Up"]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, 0, 0, 0 )
+environment = SubResource( 3 )
+current = true
+fov = 90.0
+
+[node name="Down" type="Viewport" parent="."]
+size = Vector2( 256, 256 )
+render_target_update_mode = 3
+
+[node name="Camera7" type="Camera" parent="Down"]
+transform = Transform( -1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 0, 0 )
+environment = SubResource( 3 )
+current = true
+fov = 90.0
+
+[node name="Out" type="Viewport" parent="."]
+size = Vector2( 256, 128 )
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Out"]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.972549, 0.027451, 0.027451, 1 )
