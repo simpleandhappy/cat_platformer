@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Low_Poly_Forest_treeRoundTop12Snow.obj-a3a34a4bc02f7c5e9b147d0bf027dcc3.mesh"
+
+[deps]
+
+files=[ "res://.import/Low_Poly_Forest_treeRoundTop12Snow.obj-a3a34a4bc02f7c5e9b147d0bf027dcc3.mesh" ]
+
+source_file="res://textures/Low_Poly_Forest_Pack_Devilswork.Shop_v02/OBJ/Low_Poly_Forest_treeRoundTop12Snow.obj"
+dest_files=[ "res://.import/Low_Poly_Forest_treeRoundTop12Snow.obj-a3a34a4bc02f7c5e9b147d0bf027dcc3.mesh", "res://.import/Low_Poly_Forest_treeRoundTop12Snow.obj-a3a34a4bc02f7c5e9b147d0bf027dcc3.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

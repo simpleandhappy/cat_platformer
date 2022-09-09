@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Low_Poly_Forest_treeRoundTop04.obj-5ffeab298ed6f415b367322a4deffa25.mesh"
+
+[deps]
+
+files=[ "res://.import/Low_Poly_Forest_treeRoundTop04.obj-5ffeab298ed6f415b367322a4deffa25.mesh" ]
+
+source_file="res://textures/Low_Poly_Forest_Pack_Devilswork.Shop_v02/OBJ/Low_Poly_Forest_treeRoundTop04.obj"
+dest_files=[ "res://.import/Low_Poly_Forest_treeRoundTop04.obj-5ffeab298ed6f415b367322a4deffa25.mesh", "res://.import/Low_Poly_Forest_treeRoundTop04.obj-5ffeab298ed6f415b367322a4deffa25.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286
